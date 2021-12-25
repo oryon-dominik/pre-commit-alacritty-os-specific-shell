@@ -14,7 +14,7 @@ Defaults to:
     - repo: https://github.com/oryon-dominik/pre-commit-alacritty-os-specific-shell
         hooks:
         - id: alacritty-os-specific-shell
-            args: [--posix=C:/Program Files/PowerShell/7/pwsh.exe --posix=/bin/fish]
+            args: [--windows=C:/Program Files/PowerShell/7/pwsh.exe --posix=/bin/fish]
 
 
 
