@@ -5,6 +5,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "flit >=3.5.1",
+    "PyYAML >=6.0",
 ]
 classifiers = ["Private :: Do Not Upload"]
 dynamic = ["version", "description"]
