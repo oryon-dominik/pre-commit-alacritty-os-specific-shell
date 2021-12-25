@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-"""This hook sets alacritty shell.program os-specific. Usecase: cross-os dotfiles repos."""
+"""This hook sets alacritty shell.program os-specific. Usecase: cross-os dotfile repos."""
 
 __version__ = '1.0.0'
 
@@ -44,7 +44,7 @@ def main(argv=None):
                                 posix = args.posix or '/bin/fish'
                                 lines[ix] = f"  program: '{posix}'\n"
 
-            with open(path, 'w') as file:
+            with open(path, 'w', newline='\n') as file:
                 file.writelines(lines)
 
         else:
