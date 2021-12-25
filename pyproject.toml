@@ -1,7 +1,7 @@
 [project]
 name = "pre-commit-alacritty-osspecific-shell"
 version = "0.1.0"
-description = ""
+description = "This hook sets alacritty shell.program os-specific. Used on cross-os dotfiles repos."
 requires-python = ">=3.10"
 
 [project.scripts]
