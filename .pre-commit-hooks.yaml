@@ -6,4 +6,4 @@
   description: This hook sets the alacritty shell program os-specific. Used on an cross-os dotfiles repo.
   entry: set-alacritty-shell
   language: python
-  files: alacritty.yml
+  files: ^alacritty\.yml$
