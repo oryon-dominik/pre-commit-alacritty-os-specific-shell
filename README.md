@@ -11,9 +11,10 @@ Defaults to:
 ## example .pre-commit-config.yaml
 
     repos:
-    - repo: https://github.com/oryon-dominik/pre-commit-alacritty-os-specific-shell
+      - repo: https://github.com/oryon-dominik/pre-commit-alacritty-os-specific-shell
+        rev: 1.0.1
         hooks:
-        - id: alacritty-os-specific-shell
+          - id: alacritty-os-specific-shell
             args: [--windows=C:/Program Files/PowerShell/7/pwsh.exe --posix=/bin/fish]
 
 
