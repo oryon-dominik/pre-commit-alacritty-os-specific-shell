@@ -1,0 +1,8 @@
+[project]
+name = "pre-commit-alacritty-osspecific-shell"
+version = "0.1.0"
+description = ""
+requires-python = ">=3.10"
+
+[project.scripts]
+set-alacritty-shell = "hook:main"
