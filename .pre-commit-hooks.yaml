@@ -1,9 +1,9 @@
 # A pre-commit hook.
 # See: https://pre-commit.com/
 
-- id: alacritty-osspecific-shell
+- id: alacritty-os-specific-shell
   name: Alacritty OS specific shell
   description: This hook sets alacritty shell.program os-specific. Used on cross-os dotfiles repos.
-  entry: set-alacritty-shell
+  entry: setalacrittyshell
   language: python
   files: alacritty\.yml$

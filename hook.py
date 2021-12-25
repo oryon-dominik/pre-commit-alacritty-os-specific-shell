@@ -1,6 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+"""This hook sets alacritty shell.program os-specific. Usecase: cross-os dotfiles repos."""
+
+__version__ = '1.0.0'
+
+
 import argparse
 import platform
 

@@ -1,8 +1,20 @@
 [project]
-name = "pre-commit-alacritty-osspecific-shell"
-version = "0.1.0"
-description = "This hook sets alacritty shell.program os-specific. Used on cross-os dotfiles repos."
+name = "alacritty-os-specific-shell-hook"
+authors = [{name = "oryon-dominik", email = "oryon@cyberise.de"}]
+readme = "README.md"
 requires-python = ">=3.10"
+dependencies = [
+    "flit >=3.5.1",
+]
+classifiers = ["Private :: Do Not Upload"]
+dynamic = ["version", "description"]
 
 [project.scripts]
-set-alacritty-shell = "hook:main"
+setalacrittyshell = "hook:main"
+
+[tool.flit.module]
+name = "hook"
+
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
