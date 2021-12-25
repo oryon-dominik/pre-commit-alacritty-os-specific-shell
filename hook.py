@@ -9,7 +9,6 @@ __version__ = '1.0.0'
 import argparse
 import logging
 import platform
-import yaml
 
 from pathlib import Path
 
@@ -34,19 +33,19 @@ def main(argv=None):
 
             # READ
             with open(path, 'r') as file:
-                stream = file.read()
-                alacritty_config = yaml.safe_load(stream)
-                
-                # MATCH
-                match platform.system():
-                        case "Windows":
-                            alacritty_config['shell']['program'] = args.windows or 'C:/Program Files/PowerShell/7/pwsh.exe'
-                        case _:  # pretend it's posix for all other cases
-                            alacritty_config['shell']['program'] = args.posix or '/bin/fish'
+                lines = file.readlines()
+                for ix, line in enumerate(lines):
+                    if line.startswith('  program: '):
+                        match platform.system():
+                            case "Windows":
+                                windows = args.windows or 'C:/Program Files/PowerShell/7/pwsh.exe'
+                                lines[ix] = f"  program: '{windows}'\n"
+                            case _:  # pretend it's posix for all other cases
+                                posix = args.posix or '/bin/fish'
+                                lines[ix] = f"  program: '{posix}'\n"
 
-            # WRITE
             with open(path, 'w') as file:
-                yaml.dump(alacritty_config, file)
+                file.writelines(lines)
 
         else:
             log.error(f"File {filename} does not exist.")
