@@ -31,7 +31,6 @@ def main(argv=None):
         if path.exists():
             log.debug(f"Processing File {filename}.")
 
-            # READ
             with open(path, 'r') as file:
                 lines = file.readlines()
                 for ix, line in enumerate(lines):
