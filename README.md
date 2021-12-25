@@ -2,6 +2,22 @@
 
 This hook sets alacritty shell.program os-specific. Usecase: cross-os dotfiles repos.
 
+Defaults to:
+
+    On windows:         C:/Program Files/PowerShell/7/pwsh.exe
+    All other systems:  /bin/fish
+
+
+## example .pre-commit-config.yaml
+
+    repos:
+    - repo: https://github.com/oryon-dominik/pre-commit-alacritty-os-specific-shell
+        hooks:
+        - id: alacritty-os-specific-shell
+            args: [--posix=C:/Program Files/PowerShell/7/pwsh.exe --posix=/bin/fish]
+
+
+
 ## development
 
 In the repo you want to test the hook:
