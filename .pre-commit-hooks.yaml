@@ -3,7 +3,7 @@
 
 - id: alacritty-osspecific-shell
   name: Alacritty OS specific shell
-  description: This hook sets the alacritty shell program os-specific. Used on an cross-os dotfiles repo.
+  description: This hook sets alacritty shell.program os-specific. Used on cross-os dotfiles repos.
   entry: set-alacritty-shell
   language: python
   files: ^alacritty\.yml$
