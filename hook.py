@@ -3,7 +3,7 @@
 
 """This hook sets alacritty shell.program os-specific. Usecase: cross-os dotfile repos."""
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 
 import argparse
