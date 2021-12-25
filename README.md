@@ -8,7 +8,7 @@ This hook sets alacritty shell.program os-specific. Usecase: cross-os dotfile re
     All other systems:    /bin/fish
 
 
-## Example 
+## Example usage
 
     # .pre-commit-config.yaml
     repos:
@@ -22,7 +22,7 @@ This hook sets alacritty shell.program os-specific. Usecase: cross-os dotfile re
 
 ## Development
 
-In the repo you want to test the hook:
+The repo testing the hook..
 
     pip install pre-commit
     pre-commit try-repo --verbose <path to the hook's local repo-directory>
